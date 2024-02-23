@@ -3,10 +3,15 @@ import './App.css';
 export default ()=>{
     const location = useLocation()
     return (
-        <div className = "App"> 
-         <header className="App-header">
-         <a>{location.pathname.substring(1)}</a>
-         </header>
-        </div>
+        <>
+            <head>
+            <meta property="og:title" content={location.pathname.substring(1)} />
+            </head>
+            <div className = "App"> 
+            <header className="App-header">
+            <a>{location.pathname.substring(1)}</a>
+            </header>
+            </div>
+        </>
     )
 }
