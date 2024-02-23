@@ -7,6 +7,7 @@ export default ()=>{
             <head>
             <meta property="og:title" content={location.pathname.substring(1)} />
             </head>
+            <a>updated</a>
             <div className = "App"> 
             <header className="App-header">
             <a>{location.pathname.substring(1)}</a>
