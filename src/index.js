@@ -3,23 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 import DynamicPage from "./page.js"
-const rout = createBrowserRouter([
-  {
-    path:"/",
-    element: <App />,
-  },
-  {
-    path:"/l/:txt",
-    element: <DynamicPage />,
-  }
-])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router ={rout} />
-  </React.StrictMode>
+  <HashRouter>
+    <App />
+  </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

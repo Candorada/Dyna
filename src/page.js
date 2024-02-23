@@ -1,11 +1,11 @@
-import { useParams } from "react-router-dom"
+import { useLocation } from 'react-router-dom';
 import './App.css';
 export default ()=>{
-    var data = useParams()
+    const location = useLocation()
     return (
         <div className = "App"> 
          <header className="App-header">
-         <a>{data.txt}</a>
+         <a>{location.pathname.substring(1)}</a>
          </header>
         </div>
     )
